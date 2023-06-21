@@ -1,0 +1,31 @@
+.sidebar
+    background-color: $color-green-dark
+    grid-column: sidebar-start / sidebar-end
+    grid-row: 1 / -1
+    padding-top: 3.7rem
+    display: flex
+    justify-content: center
+    @include respond(tab-land)
+        grid-column: 1 / -1
+        grid-row: 1 / 2
+        justify-content: end
+        align-items: center
+        padding: 0 4rem 0 0
+
+.hamburger
+    border: none
+    background-color: $color-gray-light
+    height: .2rem
+    width: 4.5rem
+    &::before, &::after
+        content: ""
+        background-color: $color-gray-light
+        height: .2rem
+        width: 4.5rem
+        display: block
+
+    &::before
+        transform: translateY(-1.5rem)
+
+    &::after
+        transform: translateY(1.5rem)

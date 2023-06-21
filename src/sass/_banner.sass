@@ -1,0 +1,40 @@
+.banner
+    &-img
+        grid-column: full-start / col-end 4
+        background-color: $color-blue-dark
+        display: grid
+        grid-template-columns: repeat(16, 1fr)
+        grid-template-rows: repeat(24, 1fr)
+        background: url(../img/background.png) center / cover no-repeat
+        @include respond(tab-port)
+            grid-column: 1 / -1
+        &__img-1
+            grid-column: 3 / 15
+            grid-row: 3 / 12
+            width: 100%
+            @include respond(tab-port)
+            grid-column: 2 / 10
+        &__img-2
+            width: 100%
+            grid-column: 5 / -1
+            grid-row: 10 / 23
+            transform: translateX(3.5rem)
+            @include respond(tab-port)
+            grid-column: 8 / 15
+
+    &-text
+        background-color: $color-blue-dark
+        grid-column: col-start 5 / full-end
+        //display: flex
+        //flex-direction: column
+        //justify-content: center
+        //align-items: flex-start
+        padding: 4rem
+        display: grid
+        align-content: center
+        justify-items: start
+        @include respond(tab-port)
+            grid-column: 1 / -1
+            grid-row: 5 / 6
+        &__text
+            margin-bottom: 4rem
